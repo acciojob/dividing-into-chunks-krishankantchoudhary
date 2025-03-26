@@ -20,6 +20,7 @@ const divide = (arr, n) => {
 			result.push([arr[i]]);
 		}
 	}
+	return result;
 };
 
 const n = prompt("Enter n: ");j
