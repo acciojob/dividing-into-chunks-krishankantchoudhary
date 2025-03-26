@@ -6,20 +6,21 @@ let result=[[]];
 const divide = (arr, n) => {
   // Write your code here
 	for(let i=0; i<size; i++){
-		let sum=0;
-		if(arr[i]==n){
-			arr[i]++;
+		let lastR=result[result.length-1]
+		let sum=lastR.reduce((acc,a)=>acc+a,0)
+		
+		if(arr[i]>n){
+			continue
 		}
-		else if(sum+arr[i]<=n){
-			subarray.push(arr[i]);
+			
+		if(sum+arr[i]<=n){
+			lastR.push(arr[i]);
 		}
 		else{
-			result.push(subarray);
-			
-			
+			result.push([arr[i]]);
 		}
 	}
 };
 
-const n = prompt("Enter n: ");
+const n = prompt("Enter n: ");j
 alert(JSON.stringify(divide(arr, n)));
